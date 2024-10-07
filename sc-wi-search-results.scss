@@ -56,6 +56,9 @@
 
     &.active {
       border-radius: 6px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      
     }
   }
 
@@ -151,6 +154,10 @@
     &.active {
       max-block-size: 200px;
       overflow-y: scroll;
+      border-top: 1px solid #F8F8F8;
+      position: relative;
+      z-index: 99;
+      margin-top: 3px;
     }
 
     & li {
@@ -650,14 +657,20 @@
       align-items: center;
 
       &-main {
-        width: 95%;
-        margin: 0 auto;
+        padding: 0 16px;
       }
 
       &-article {
         flex-direction: column;
         width: 100%;
-        max-width: 361px;
+        // max-width: 361px;
+        &-left {
+          & img {
+            min-width: unset !important;
+            max-width: unset !important;
+            width: 100% !important;
+          }
+        }
       }
     }
 
@@ -704,8 +717,8 @@
     }
 
     &__vertical-separator {
-      width: 95%;
-      margin: 20px auto 10px;
+      padding: 0 16px;
+      margin-bottom: 40px;
       border-top: 1px solid #cccbcb;
     }
 
