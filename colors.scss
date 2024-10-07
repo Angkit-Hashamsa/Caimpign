@@ -163,3 +163,20 @@ $color-grey-night-rider: #303030;
 //gradient
 $color-blue-gradient: #6cc9fe;
 $color-green-gradient: #38d54a;
+
+
+@mixin sc-sub-sup-fix() {
+    /* stylelint-disable selector-max-type */
+    sup {
+      vertical-align: super;
+      font-size: 10px; /* stylelint-disable-line */
+      line-height: 0;
+    }
+  
+    sub {
+      vertical-align: sub;
+      font-size: 10px; /* stylelint-disable-line */
+      line-height: 0;
+    }
+    /* stylelint-enable selector-max-type */
+  }
