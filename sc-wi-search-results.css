@@ -200,7 +200,7 @@
 .sc-wi-search-results__articles-list {
   width: 100%;
   max-width: 1404px;
-  margin: 24px auto 0;
+  margin: 60px auto 0;
 }
 .sc-wi-search-results__articles-block {
   display: flex;
@@ -398,6 +398,7 @@
   margin-top: 0;
   font-size: 14px;
   margin-bottom: 16px;
+  line-height: 18.62px;
 }
 .sc-wi-search-results__campaing-article-footer a {
   font-size: 14px;
@@ -541,7 +542,7 @@
 }
 @media only screen and (max-width: 767px) {
   .sc-wi-search-results__input-container {
-    width: 95%;
+    width: 80%;
   }
   .sc-wi-search-results__articles {
     align-items: center;
@@ -588,7 +589,8 @@
     visibility: visible;
   }
   .sc-wi-search-results__vertical-separator {
-    margin: 20px 0 10px;
+    width: 95%;
+    margin: 20px auto 10px;
     border-top: 1px solid #cccbcb;
   }
   .sc-wi-search-results__more {
@@ -599,6 +601,7 @@
 @media only screen and (min-width: 993px) {
   .sc-wi-search-results__articles-block {
     flex-direction: row;
+    gap: 40px;
   }
   .sc-wi-search-results__no-results.sc-wi-search-results__popular-articles {
     gap: 40px;

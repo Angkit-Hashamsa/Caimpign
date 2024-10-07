@@ -228,7 +228,7 @@
     &-list {
       width: 100%;
       max-width: 1404px;
-      margin: 24px auto 0;
+      margin: 60px auto 0;
     }
 
     &-block {
@@ -462,6 +462,7 @@
       margin-top: 0;
       font-size: 14px;
       margin-bottom: 16px;
+      line-height: 18.62px;
     }
 
     a {
@@ -642,7 +643,7 @@
 @media only screen and (max-width: 767px) {
   .sc-wi-search-results {
     &__input-container {
-      width: 95%;
+      width: 80%;
     }
 
     &__articles {
@@ -703,7 +704,8 @@
     }
 
     &__vertical-separator {
-      margin: 20px 0 10px;
+      width: 95%;
+      margin: 20px auto 10px;
       border-top: 1px solid #cccbcb;
     }
 
@@ -719,6 +721,7 @@
     &__articles {
       &-block {
         flex-direction: row;
+        gap: 40px;
       }
     }
   }
