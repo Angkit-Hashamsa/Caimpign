@@ -1,0 +1,165 @@
+//
+// NOTE: If you haven't any idea of which name to choose for a new color,
+// go to http://www.htmlcsscolor.com/hex/FFFFFF and search HEX to get a name
+//
+$color-black: #000;
+$color-white: #fff;
+$color-white-smoke: #f6f6f6;
+$color-white-smoke-2: #f3f3f3;
+$color-white-smoke-3: #f8f8f8;
+$color-white-smoke-4: #f7fbff;
+$color-white-smoke-5: #f5f5f5;
+$color-green: #008738;
+$color-green-2: #00756a;
+$color-green-light: #c4dec7;
+$color-green-light-2: #f6fdf7;
+$color-green-light-3: #43c6ac;
+$color-green-light-4: #29a048;
+$green-green-light-5: #69bf29;
+$color-green-light-6: #7cbb89;
+$color-green-light-7: #e5f5ed;
+$color-green-light-8: #3eb812;
+$color-green-light-9: #61ab7c;
+$color-green-light-10: #e8f3ec;
+$color-green-dark: #007932;
+$color-blue: #0c77b9;
+$color-blue-2: #0756af;
+$color-blue-3: #0091ea;
+$color-blue-4: #0053b2;
+$color-blue-5: #007eb2;
+$color-blue-6: #6ba8d0;
+$color-blue-7: #005982;
+$color-blue-11: #0b77b9;
+$color-blue-12: #0967a1;
+$color-blue-13: #0077bf;
+$color-blue-14: #0074be;
+$color-blue-15: #1c80bd;
+$color-blue-16: #2772c7;
+$color-blue-17: #4579ff;
+$color-sky-blue: #00bcd3;
+$color-sky-blue-2: #00a9f3;
+$color-blue-dark: #141924;
+$color-blue-dark-2: #001b49;
+$color-blue-dark-3: #001b47;
+$color-blue-dark-4: #022031;
+$color-blue-dark-5: #07203d;
+$color-blue-dark-6: #0a294d;
+$color-blue-dark-7: #193043;
+$color-blue-light: #f0f9ff;
+$color-blue-light-2: #eef4fb;
+$color-blue-light-3: #669bd7;
+$color-blue-light-4: #f0f6fb;
+$color-blue-light-5: #a9c7e9;
+$color-dark: #191919;
+$color-grey-border: #e1e1e1;
+$color-grey-xxdark: #303030;
+$color-grey-xdark: #3f3e35;
+$color-grey-xdark-blue: #3a3d3f;
+$color-grey-dark: #2b2929;
+$color-grey-dark-2: #535353;
+$color-grey-dark-3: #4a4a4a;
+$color-grey-dark-4: #777;
+$color-grey-dark-5: #4f4f52;
+$color-grey-dark-6: #333;
+$color-grey-dark-7: #6f6f6f;
+$color-grey-dark-8: #4a5d7d;
+$color-grey-medium: #373737;
+$color-grey-medium-2: #404143;
+$color-grey-medium-3: #737373;
+$color-grey-medium-4: #6e6e6e;
+$color-grey-medium-5: #636363;
+$color-grey-medium-6: #828589;
+$color-grey-medium-7: #6b6e73;
+$color-grey-medium-8: #939393;
+$color-grey-light: #b7b7b7;
+$color-grey-light-1: #555550;
+$color-grey-light-2: #eee;
+$color-grey-light-3: #555;
+$color-grey-light-4: #e2e2e2;
+$color-grey-light-5: #ccc;
+$color-grey-light-6: #d4d4d4;
+$color-grey-light-7: #e5e5e5;
+$color-grey-light-8: #f9f9f9;
+$color-grey-light-9: #a1a1a1;
+$color-grey-light-10: #b9b9b9;
+$color-grey-light-11: #fcfcfc;
+$color-grey-light-12: #f1f1f1;
+$color-grey-light-13: #919191;
+$color-grey-light-14: #f7f7f7;
+$color-grey-light-15: #f1efef;
+$color-grey-light-16: #c6c6c6;
+$color-grey-light-17: #e6e6e6;
+$color-grey-light-18: #fafafa;
+$color-grey-light-19: #757575;
+$color-grey-light-20: #fbfbfb;
+$color-grey-light-21: #ebf2f7;
+$color-grey-light-22: #e9f4e7;
+$color-grey-light-23: #dedede;
+$color-grey-light-24: #dedede;
+$color-grey-light-25: #ececec;
+$color-grey-light-26: #dfdfdf;
+$color-grey-light-28: #9b9b9b;
+$color-grey-dots: #afb0b2;
+$color-yellow-light: #fffddb;
+$color-gold: #f9e377;
+$color-red: #d0011b;
+$color-red-1: #f6333d;
+$color-red-0: #d0021b;
+
+// Colors used in Jumpstart page.
+$color-red-2: #fc1c51;
+$color-red-3: #f9e9ed;
+$color-green-3: #61d167;
+$color-green-4: #aff4d1;
+$color-green-5: #2ed089;
+$color-green-6: #ecfdf8;
+$color-green-7: #08d656;
+$color-green-light-1: #e8f3ec;
+$color-yellow: #fcb01c;
+$color-yellow-1: #fef4de;
+$color-yellow-2: #ffba06;
+$color-orange: #ff6839;
+$color-orange-1: #fff2ee;
+$color-blue-8: #4481eb;
+$color-blue-9: #00d5ff;
+$color-blue-10: #dbf9ff;
+$color-purple: #2c234d;
+$color-purple-2: #404ff0;
+$color-purple-3: #eeefff;
+$color-purple-4: #7b7b93;
+
+//social icons colors
+$color-grey-social-icons-dark: #434343;
+$color-grey-social-icons-light: #666;
+$color-blue-social-icons-dark: #0272b2;
+$color-blue-social-icons-light: #05c1ff;
+$color-green-social-icons-light: #7bb32e;
+
+//
+$color-black-translucent-50: rgba($color-black, 0.5);
+$color-white-translucent-50: rgba($color-white, 0.5);
+$color-green-translucent-50: rgba($color-green, 0.5);
+$color-blue-translucent-50: rgba($color-blue, 0.5);
+$color-dark-blue-translucent-20: rgba(#20242e, 0.2);
+
+// profile-slider gradient
+$color-profile-slider: #abecab #8ed694 #348851;
+$color-profile-slider-header: #02b8f8;
+
+// modal
+$color-modal-overlay: rgba($color-black, 0.87);
+$color-dark-blue-overlay: rgba($color-blue-dark, 0.45);
+
+// index colors
+$color-highlight-yellow: #f9ffcf;
+
+$color-grey-light-whisper: #eee;
+$color-grey-light-suva: #919191;
+$color-grey-light-snow: #f9f9f9;
+$color-grey-light-whisper: #e5e5e5;
+$color-grey-light-gainsboro: #d9d9d9;
+$color-grey-night-rider: #303030;
+
+//gradient
+$color-blue-gradient: #6cc9fe;
+$color-green-gradient: #38d54a;
