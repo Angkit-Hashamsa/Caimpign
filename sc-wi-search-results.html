@@ -1,265 +1,344 @@
-<div class="sc-wi-search-results">
-  <div class="sc-wi-search-results__banner">
-    <picture>
-      <source media="(max-width: 768px)" srcset="../../../../_fakes/images/sc-wi-results/mobile.jpeg" />
-      <img alt="banner image" loading="lazy" src="../../../../_fakes/images/sc-wi-results/desktop.jpeg" />
-    </picture>
-  </div>
-  <div class="sc-wi-search-results__search-box">
-    <h1 class="sc-wi-search-results__title">
-      Search Results
-    </h1>
-    <div class="sc-wi-search-results__input-container">
-      <div class="sc-wi-search-results__prefix">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6.34 10.903A4.567 4.567 0 0 1 1.778 6.34 4.568 4.568 0 0 1 6.34 1.777a4.569 4.569 0 0 1 4.564 4.564 4.567 4.567 0 0 1-4.564 4.562m8.73 2.721l-3.596-3.592a6.283 6.283 0 0 0 1.208-3.691A6.348 6.348 0 0 0 6.34 0 6.348 6.348 0 0 0 0 6.34a6.347 6.347 0 0 0 6.34 6.34c1.476 0 2.816-.526 3.895-1.374l3.577 3.575a.887.887 0 0 0 1.257 0 .89.89 0 0 0 0-1.257" fill="#221F20"></path>
-        </svg>
-      </div>
-      <input class="sc-wi-search-results__input" type="text" name="search" placeholder="Search....">
-      <div class="sc-wi-search-results__actions">
-        <div class="sc-wi-search-results__clear">
-          <svg viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true">
-          <path d="M685.4 354.8c0-4.4-3.6-8-8-8l-66 .3L512 465.6l-99.3-118.4-66.1-.3c-4.4 0-8 3.5-8 8 0 1.9.7 3.7 1.9 5.2l130.1 155L340.5 670a8.32 8.32 0 00-1.9 5.2c0 4.4 3.6 8 8 8l66.1-.3L512 564.4l99.3 118.4 66 .3c4.4 0 8-3.5 8-8 0-1.9-.7-3.7-1.9-5.2L553.5 515l130.1-155c1.2-1.4 1.8-3.3 1.8-5.2z"></path>
-          <path d="M512 65C264.6 65 64 265.6 64 513s200.6 448 448 448 448-200.6 448-448S759.4 65 512 65zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>
+<!DOCTYPE html>
+<html lang="en">
+  <head data-locator-hook-status-message="No valid renderers found.">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+  </script>
+  <script>var digitalData = {"page":{"pageInfo":{"pageID":716319,"pageName":"sg:en::::::wi-search-results-landing-page-2"},"category":{"primaryCategory":"","subCategory1":"","subCategory2":""},"attributes":{"language":"en","country":"sg","currency":""}}};</script>
+    <style>
+      
+      /* NOTE: This styles can't be in a external stylesheet due to browsers bug */
+      .no-touchevents .hover-icon-with-gradient-blue-to-green:hover .hover-icon svg path {
+        fill: url('#gradient-blue-to-green');
+      }
+    </style>
+      
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PHQV2K');</script>
+      <!-- End Google Tag Manager -->
+    <link rel="stylesheet" id="videojs-css" href="https://preview.standardchartered.com/development/assets/global/css/vendor.css?ver=e11bcb2" type="text/css" media="all">
+  <link rel="stylesheet" id="sc_retail-style-css" href="https://preview.standardchartered.com/development/assets/global/css/style-base.css?ver=e11bcb2" type="text/css" media="all">
+  <link rel="stylesheet" id="sc_retail-style-print-css" href="https://preview.standardchartered.com/development/assets/global/css/style-print.css?ver=e11bcb2" type="text/css" media="print">
+  <link rel="stylesheet" id="sc_retail-style-mobile-css" href="https://preview.standardchartered.com/development/assets/global/css/style-mobile.css?ver=e11bcb2" type="text/css" media="(max-width: 767px)">
+  <link rel="stylesheet" id="sc_retail-style-tablet-css" href="https://preview.standardchartered.com/development/assets/global/css/style-tablet.css?ver=e11bcb2" type="text/css" media="(min-width: 768px)">
+  <link rel="stylesheet" id="sc_retail-style-desktop-css" href="https://preview.standardchartered.com/development/assets/global/css/style-desktop.css?ver=e11bcb2" type="text/css" media="(min-width: 1024px)">
+  <link rel="stylesheet" id="wp-block-library-css" href="https://preview.standardchartered.com/development/market-outlook/wp-includes/css/dist/block-library/style.min.css?ver=5.9.7" type="text/css" media="all">
+  <link rel="stylesheet" id="wp-components-css" href="https://preview.standardchartered.com/development/market-outlook/wp-includes/css/dist/components/style.min.css?ver=5.9.7" type="text/css" media="all">
+  <script src="https://preview.standardchartered.com/development/assets/global/js/vendor/jquery-3.5.1.min.js?ver=1" id="jquery-js"></script>
+  <!-- <script src="https://preview.standardchartered.com/development/assets/global/js/utils.js?ver=e11bcb2" id="utility-js"></script><script src="https://preview.standardchartered.com/development/assets/tpl/onetrust/test/sg/scripttemplates/202209.2.0/otBannerSdk.js" async="" type="text/javascript"></script> -->
+  <!-- <script src="https://preview.standardchartered.com/development/assets/global/js/head.js?ver=e11bcb2" id="headjs-js"></script> -->
+  <meta property="og:site_name" content="Standard Chartered Singapore">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="apple-itunes-app" content="app-id=367337298">
+  <meta name="google-play-app" content="app-id=air.app.scb.breeze.android.main.sg.prod">
+  <meta name="title" content="WI – Search Results Landing Page 2">
+  <link rel="alternate" href="https://preview.standardchartered.com/development/sg/wi-search-results-landing-page-2/" hreflang="x-default">
+  <meta property="og:title" content="WI – Search Results Landing Page 2">
+  <meta property="og:url" content="https://preview.standardchartered.com/development/sg/wi-search-results-landing-page-2/">
+  <meta name="twitter:title" content="WI – Search Results Landing Page 2">
+  <meta name="generator" content="Site Kit by Google 1.107.0"><!-- OneTrust Cookies Consent Notice start for www.sc.com/sg -->
+  
+  <!-- <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="1bbcbc8b-f4ff-460e-911a-6f8fa7e8d2c1"></script> -->
+  <script type="text/javascript">
+  // function OptanonWrapper() { }
+  </script>
+  <!-- OneTrust Cookies Consent Notice end for www.sc.com/sg -->	<script>
+      // var baseURL = "https:\/\/preview.standardchartered.com\/development\/assets\/global";
+    </script>
+    <!-- <link href="//av.sc.com/assets/global/fonts/sc-sans-web-regular.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link href="//av.sc.com/assets/global/fonts/sc-sans-web-light.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link href="//av.sc.com/assets/global/fonts/sc-sans-web-bold.woff2" rel="preload" as="font" crossorigin="anonymous">
+  <link href="//av.sc.com/assets/global/fonts/sc-sans-web-thin.woff2" rel="preload" as="font" crossorigin="anonymous"> -->
+  <link rel="canonical" href="https://preview.standardchartered.com/development/sg/wi-search-results-landing-page-2/"><meta name="google-site-verification" content="SfHqPRCgkTqYvJLlOweIWBquyAakAZZVr-Rzb8JKs5A"><meta name="google-site-verification" content="pEK4elkCuGof8lyfmyxMdboWD_B8xwX4Sm5nogqZ7bE"><link rel="icon" href="https://preview.standardchartered.com/development/sg/content/images/content/images/cropped-standard-chartered-trustmark-150x150.png" sizes="32x32">
+  <link rel="icon" href="https://preview.standardchartered.com/development/sg/content/images/content/images/cropped-standard-chartered-trustmark-200x200.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="https://preview.standardchartered.com/development/sg/content/images/content/images/cropped-standard-chartered-trustmark-200x200.png">
+  <meta name="msapplication-TileImage" content="https://preview.standardchartered.com/development/sg/content/images/content/images/cropped-standard-chartered-trustmark-300x300.png">
+<link rel="stylesheet" href="sc-wi-search-results.css">
+
+          
+                        </head>
+<body>
+  <div class="sc-wi-search-results">
+    <div class="sc-wi-search-results__banner">
+      <picture>
+        <source media="(max-width: 768px)" srcset="./sc-wi-results/mobile.jpeg" />
+        <img alt="banner image" loading="lazy" src="./sc-wi-results/desktop.jpeg" />
+      </picture>
+    </div>
+    <div class="sc-wi-search-results__search-box">
+      <h1 class="sc-wi-search-results__title">
+        Search Results
+      </h1>
+      <div class="sc-wi-search-results__input-container">
+        <div class="sc-wi-search-results__prefix">
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.34 10.903A4.567 4.567 0 0 1 1.778 6.34 4.568 4.568 0 0 1 6.34 1.777a4.569 4.569 0 0 1 4.564 4.564 4.567 4.567 0 0 1-4.564 4.562m8.73 2.721l-3.596-3.592a6.283 6.283 0 0 0 1.208-3.691A6.348 6.348 0 0 0 6.34 0 6.348 6.348 0 0 0 0 6.34a6.347 6.347 0 0 0 6.34 6.34c1.476 0 2.816-.526 3.895-1.374l3.577 3.575a.887.887 0 0 0 1.257 0 .89.89 0 0 0 0-1.257" fill="#221F20"></path>
           </svg>
         </div>
-        <button class="sc-wi-search-results__button">Search</button>
-      </div>
-      <div class="sc-wi-search-results__suggestions">
-        <ul class="sc-wi-search-results__result-suggestions"></ul>
+        <input class="sc-wi-search-results__input" type="text" name="search" placeholder="Search....">
+        <div class="sc-wi-search-results__actions">
+          <div class="sc-wi-search-results__clear">
+            <svg viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+            <path d="M685.4 354.8c0-4.4-3.6-8-8-8l-66 .3L512 465.6l-99.3-118.4-66.1-.3c-4.4 0-8 3.5-8 8 0 1.9.7 3.7 1.9 5.2l130.1 155L340.5 670a8.32 8.32 0 00-1.9 5.2c0 4.4 3.6 8 8 8l66.1-.3L512 564.4l99.3 118.4 66 .3c4.4 0 8-3.5 8-8 0-1.9-.7-3.7-1.9-5.2L553.5 515l130.1-155c1.2-1.4 1.8-3.3 1.8-5.2z"></path>
+            <path d="M512 65C264.6 65 64 265.6 64 513s200.6 448 448 448 448-200.6 448-448S759.4 65 512 65zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>
+            </svg>
+          </div>
+          <button class="sc-wi-search-results__button">Search</button>
+        </div>
+        <div class="sc-wi-search-results__suggestions">
+          <ul class="sc-wi-search-results__result-suggestions"></ul>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="sc-wi-search-results__articles-list">
-    <span class="sc-wi-search-results__slide-back-here"></span>
-    <section class="sc-wi-search-results__articles-block">
-      <div class="sc-wi-search-results__articles-container">
-        <div class="sc-wi-search-results__articles-main">
+    <div class="sc-wi-search-results__articles-list">
+      <span class="sc-wi-search-results__slide-back-here"></span>
+      <section class="sc-wi-search-results__articles-block">
+        <div class="sc-wi-search-results__articles-container">
+          <div class="sc-wi-search-results__articles-main">
+            <h3>
+              <span class="sc-wi-search-results__result-counter">0</span>
+              articles found
+            </h3>
+            <div class="sc-wi-search-results__articles"></div>
+          </div>
+          <div class="sc-wi-search-results__pagination"></div>
+        </div>
+        <div class="sc-wi-search-results__vertical-separator"></div>
+        <div class="sc-wi-search-results__popular">
           <h3>
-            <span class="sc-wi-search-results__result-counter">0</span>
-            articles found
+            Popular This Week
           </h3>
-          <div class="sc-wi-search-results__articles"></div>
+          <div class="sc-wi-search-results__popular-articles">
+            <div class="sc-wi-search-results__popular-article">
+              <a href="/" target="_blank">
+                <img src="./sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
+              </a>
+              <h4>
+                <a href="/" title="" target="_blank">
+                  The Ultimate Financial Goals guide from your 20's to your 50's
+                </a>
+              </h4>
+              <div class="sc-wi-search-results__popular-article-footer">
+                <span class="sc-wi-search-results__date">
+                  06 February 2024
+                </span>
+                <span></span>
+                <span class="sc-wi-search-results__read-time">
+                  15 mins read
+                </span>
+              </div>
+            </div>
+            <div class="sc-wi-search-results__popular-article">
+              <a href="/" target="_blank">
+                <img src="./sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
+              </a>
+              <h4>
+                <a href="/" title="" target="_blank">
+                  The Ultimate Financial Goals guide from your 20's to your 50's
+                </a>
+              </h4>
+              <div class="sc-wi-search-results__popular-article-footer">
+                <span class="sc-wi-search-results__date">
+                  06 February 2024
+                </span>
+                <span></span>
+                <span class="sc-wi-search-results__read-time">
+                  15 mins read
+                </span>
+              </div>
+            </div>
+            <div class="sc-wi-search-results__popular-article">
+              <a href="/" target="_blank">
+                <img src="./sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
+              </a>
+              <h4>
+                <a href="/" title="" target="_blank">
+                  The Ultimate Financial Goals guide from your 20's to your 50's
+                </a>
+              </h4>
+              <div class="sc-wi-search-results__popular-article-footer">
+                <span class="sc-wi-search-results__date">
+                  06 February 2024
+                </span>
+                <span></span>
+                <span class="sc-wi-search-results__read-time">
+                  15 mins read
+                </span>
+              </div>
+            </div>
+            <div class="sc-wi-search-results__popular-article">
+              <a href="/" target="_blank">
+                <img src="./sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
+              </a>
+              <h4>
+                <a href="/" title="" target="_blank">
+                  The Ultimate Financial Goals guide from your 20's to your 50's
+                </a>
+              </h4>
+              <div class="sc-wi-search-results__popular-article-footer">
+                <span class="sc-wi-search-results__date">
+                  06 February 2024
+                </span>
+                <span></span>
+                <span class="sc-wi-search-results__read-time">
+                  15 mins read
+                </span>
+              </div>
+            </div>
+            <div class="sc-wi-search-results__popular-article">
+              <a href="/" target="_blank">
+                <img src="./sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
+              </a>
+              <h4>
+                <a href="/" title="" target="_blank">
+                  The Ultimate Financial Goals guide from your 20's to your 50's
+                </a>
+              </h4>
+              <div class="sc-wi-search-results__popular-article-footer">
+                <span class="sc-wi-search-results__date">
+                  06 February 2024
+                </span>
+                <span></span>
+                <span class="sc-wi-search-results__read-time">
+                  15 mins read
+                </span>
+              </div>
+            </div>
+            <div class="sc-wi-search-results__popular-article">
+              <a href="/" target="_blank">
+                <img src="./sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
+              </a>
+              <h4>
+                <a href="/" title="" target="_blank">
+                  The Ultimate Financial Goals guide from your 20's to your 50's
+                </a>
+              </h4>
+              <div class="sc-wi-search-results__popular-article-footer">
+                <span class="sc-wi-search-results__date">
+                  06 February 2024
+                </span>
+                <span></span>
+                <span class="sc-wi-search-results__read-time">
+                  15 mins read
+                </span>
+              </div>
+            </div>
+            <div class="sc-wi-search-results__popular-article">
+              <a href="/" target="_blank">
+                <img src="./sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
+              </a>
+              <h4>
+                <a href="/" title="" target="_blank">
+                  The Ultimate Financial Goals guide from your 20's to your 50's
+                </a>
+              </h4>
+              <div class="sc-wi-search-results__popular-article-footer">
+                <span class="sc-wi-search-results__date">
+                  06 February 2024
+                </span>
+                <span></span>
+                <span class="sc-wi-search-results__read-time">
+                  15 mins read
+                </span>
+              </div>
+            </div>
+            <div class="sc-wi-search-results__popular-article">
+              <a href="/" target="_blank">
+                <img src="./sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
+              </a>
+              <h4>
+                <a href="/" title="" target="_blank">
+                  The Ultimate Financial Goals guide from your 20's to your 50's
+                </a>
+              </h4>
+              <div class="sc-wi-search-results__popular-article-footer">
+                <span class="sc-wi-search-results__date">
+                  06 February 2024
+                </span>
+                <span></span>
+                <span class="sc-wi-search-results__read-time">
+                  15 mins read
+                </span>
+              </div>
+            </div>
+            <div class="sc-wi-search-results__popular-article">
+              <a href="/" target="_blank">
+                <img src="./sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
+              </a>
+              <h4>
+                <a href="/" title="" target="_blank">
+                  The Ultimate Financial Goals guide from your 20's to your 50's
+                </a>
+              </h4>
+              <div class="sc-wi-search-results__popular-article-footer">
+                <span class="sc-wi-search-results__date">
+                  06 February 2024
+                </span>
+                <span></span>
+                <span class="sc-wi-search-results__read-time">
+                  15 mins read
+                </span>
+              </div>
+            </div>
+            <div class="sc-wi-search-results__popular-article">
+              <a href="/" target="_blank">
+                <img src="./sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
+              </a>
+              <h4>
+                <a href="/" title="" target="_blank">
+                  The Ultimate Financial Goals guide from your 20's to your 50's
+                </a>
+              </h4>
+              <div class="sc-wi-search-results__popular-article-footer">
+                <span class="sc-wi-search-results__date">
+                  06 February 2024
+                </span>
+                <span></span>
+                <span class="sc-wi-search-results__read-time">
+                  15 mins read
+                </span>
+              </div>
+            </div>
+          </div>
+          <button class="sc-wi-search-results__more">
+            View Less
+          </button>
         </div>
-        <div class="sc-wi-search-results__pagination"></div>
-      </div>
-      <div class="sc-wi-search-results__vertical-separator"></div>
-      <div class="sc-wi-search-results__popular">
-        <h3>
-          Popular This Week
-        </h3>
-        <div class="sc-wi-search-results__popular-articles">
-          <div class="sc-wi-search-results__popular-article">
-            <a href="/" target="_blank">
-              <img src="../../../../_fakes/images/sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
-            </a>
-            <h4>
-              <a href="/" title="" target="_blank">
-                The Ultimate Financial Goals guide from your 20's to your 50's
-              </a>
-            </h4>
-            <div class="sc-wi-search-results__popular-article-footer">
-              <span class="sc-wi-search-results__date">
-                06 February 2024
-              </span>
-              <span></span>
-              <span class="sc-wi-search-results__read-time">
-                15 mins read
-              </span>
-            </div>
-          </div>
-          <div class="sc-wi-search-results__popular-article">
-            <a href="/" target="_blank">
-              <img src="../../../../_fakes/images/sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
-            </a>
-            <h4>
-              <a href="/" title="" target="_blank">
-                The Ultimate Financial Goals guide from your 20's to your 50's
-              </a>
-            </h4>
-            <div class="sc-wi-search-results__popular-article-footer">
-              <span class="sc-wi-search-results__date">
-                06 February 2024
-              </span>
-              <span></span>
-              <span class="sc-wi-search-results__read-time">
-                15 mins read
-              </span>
-            </div>
-          </div>
-          <div class="sc-wi-search-results__popular-article">
-            <a href="/" target="_blank">
-              <img src="../../../../_fakes/images/sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
-            </a>
-            <h4>
-              <a href="/" title="" target="_blank">
-                The Ultimate Financial Goals guide from your 20's to your 50's
-              </a>
-            </h4>
-            <div class="sc-wi-search-results__popular-article-footer">
-              <span class="sc-wi-search-results__date">
-                06 February 2024
-              </span>
-              <span></span>
-              <span class="sc-wi-search-results__read-time">
-                15 mins read
-              </span>
-            </div>
-          </div>
-          <div class="sc-wi-search-results__popular-article">
-            <a href="/" target="_blank">
-              <img src="../../../../_fakes/images/sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
-            </a>
-            <h4>
-              <a href="/" title="" target="_blank">
-                The Ultimate Financial Goals guide from your 20's to your 50's
-              </a>
-            </h4>
-            <div class="sc-wi-search-results__popular-article-footer">
-              <span class="sc-wi-search-results__date">
-                06 February 2024
-              </span>
-              <span></span>
-              <span class="sc-wi-search-results__read-time">
-                15 mins read
-              </span>
-            </div>
-          </div>
-          <div class="sc-wi-search-results__popular-article">
-            <a href="/" target="_blank">
-              <img src="../../../../_fakes/images/sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
-            </a>
-            <h4>
-              <a href="/" title="" target="_blank">
-                The Ultimate Financial Goals guide from your 20's to your 50's
-              </a>
-            </h4>
-            <div class="sc-wi-search-results__popular-article-footer">
-              <span class="sc-wi-search-results__date">
-                06 February 2024
-              </span>
-              <span></span>
-              <span class="sc-wi-search-results__read-time">
-                15 mins read
-              </span>
-            </div>
-          </div>
-          <div class="sc-wi-search-results__popular-article">
-            <a href="/" target="_blank">
-              <img src="../../../../_fakes/images/sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
-            </a>
-            <h4>
-              <a href="/" title="" target="_blank">
-                The Ultimate Financial Goals guide from your 20's to your 50's
-              </a>
-            </h4>
-            <div class="sc-wi-search-results__popular-article-footer">
-              <span class="sc-wi-search-results__date">
-                06 February 2024
-              </span>
-              <span></span>
-              <span class="sc-wi-search-results__read-time">
-                15 mins read
-              </span>
-            </div>
-          </div>
-          <div class="sc-wi-search-results__popular-article">
-            <a href="/" target="_blank">
-              <img src="../../../../_fakes/images/sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
-            </a>
-            <h4>
-              <a href="/" title="" target="_blank">
-                The Ultimate Financial Goals guide from your 20's to your 50's
-              </a>
-            </h4>
-            <div class="sc-wi-search-results__popular-article-footer">
-              <span class="sc-wi-search-results__date">
-                06 February 2024
-              </span>
-              <span></span>
-              <span class="sc-wi-search-results__read-time">
-                15 mins read
-              </span>
-            </div>
-          </div>
-          <div class="sc-wi-search-results__popular-article">
-            <a href="/" target="_blank">
-              <img src="../../../../_fakes/images/sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
-            </a>
-            <h4>
-              <a href="/" title="" target="_blank">
-                The Ultimate Financial Goals guide from your 20's to your 50's
-              </a>
-            </h4>
-            <div class="sc-wi-search-results__popular-article-footer">
-              <span class="sc-wi-search-results__date">
-                06 February 2024
-              </span>
-              <span></span>
-              <span class="sc-wi-search-results__read-time">
-                15 mins read
-              </span>
-            </div>
-          </div>
-          <div class="sc-wi-search-results__popular-article">
-            <a href="/" target="_blank">
-              <img src="../../../../_fakes/images/sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
-            </a>
-            <h4>
-              <a href="/" title="" target="_blank">
-                The Ultimate Financial Goals guide from your 20's to your 50's
-              </a>
-            </h4>
-            <div class="sc-wi-search-results__popular-article-footer">
-              <span class="sc-wi-search-results__date">
-                06 February 2024
-              </span>
-              <span></span>
-              <span class="sc-wi-search-results__read-time">
-                15 mins read
-              </span>
-            </div>
-          </div>
-          <div class="sc-wi-search-results__popular-article">
-            <a href="/" target="_blank">
-              <img src="../../../../_fakes/images/sc-wi-results/popular-article.jpeg" alt="" loading="lazy" />
-            </a>
-            <h4>
-              <a href="/" title="" target="_blank">
-                The Ultimate Financial Goals guide from your 20's to your 50's
-              </a>
-            </h4>
-            <div class="sc-wi-search-results__popular-article-footer">
-              <span class="sc-wi-search-results__date">
-                06 February 2024
-              </span>
-              <span></span>
-              <span class="sc-wi-search-results__read-time">
-                15 mins read
-              </span>
-            </div>
-          </div>
-        </div>
-        <button class="sc-wi-search-results__more">
-          View Less
-        </button>
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <div style="height: 20vh;background-color:red; width: 100vw;">
+
+    </div>
+    <span
+      class="sc-wi-search__dynamic-data"
+      min-input-characters="3"
+      pagination-prev-label="Prev"
+      pagination-next-label="Next"
+      pagination-results-per-page="10"
+      view-more-details="View More Details"
+      search-json-url="https://preview.standardchartered.com/development/sg/data/wealth-insights/wi-search.json"
+      search-results-page-url="/"
+      search-no-results-svg="./sc-wi-results/no-results.svg"
+      search-no-results-heading="No Results Found."
+      search-no-results-message="Try refining your search with different keywords or check your spelling."
+      popular-articles-show-more="View More"
+      popular-articles-show-less="View Less"
+    >
+    </span>
   </div>
-  <span
-    class="sc-wi-search__dynamic-data"
-    min-input-characters="3"
-    pagination-prev-label="Prev"
-    pagination-next-label="Next"
-    pagination-results-per-page="10"
-    view-more-details="View More Details"
-    search-json-url="https://preview.standardchartered.com/development/sg/data/wealth-insights/wi-search.json"
-    search-results-page-url="https://localhost:8443/modules-catalog/modules/sc-wi-search-results/preview.html"
-    search-no-results-svg="../../../../_fakes/images/sc-wi-results/no-results.svg"
-    search-no-results-heading="No Results Found."
-    search-no-results-message="Try refining your search with different keywords or check your spelling."
-    popular-articles-show-more="View More"
-    popular-articles-show-less="View Less"
-  >
-  </span>
-</div>
+  <script src="./sc-wi-search-results.js"></script>
+</body>
+</html>
+
+

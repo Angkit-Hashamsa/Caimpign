@@ -5,6 +5,7 @@ class WI_Search_Results_Page {
    */
   init() {
     document.addEventListener('DOMContentLoaded', async () => {
+      console.log('Called');
       this.currentPage = 1;
       this.searchResults = [];
       this.searchResultsCounter = 0;
@@ -59,6 +60,7 @@ class WI_Search_Results_Page {
         this.jsonURL = this.dynamicSpan.getAttribute('search-json-url');
         this.search_results_location = this.dynamicSpan.getAttribute('search-results-page-url');
 
+        console.log(this.jsonURL);
         if (this.jsonURL) {
           await this.fetch_json_data_from_url(this.jsonURL);
         }
@@ -74,9 +76,13 @@ class WI_Search_Results_Page {
     if (!url) {
       return;
     }
-
+    const username = 'webdesign';
+    const password = 'web2021'
+    const headers = new Headers();
+    const encodedCredentials = btoa(`${username}:${password}`);
+    headers.append('Authorization', `Basic ${encodedCredentials}`);
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, {headers});
 
       if (!response.ok) {
         throw new Error('Network issue, try refreshing again!');
@@ -712,4 +718,4 @@ class WI_Search_Results_Page {
 // Create an instance of WI_Search_Results_Page
 const instance = new WI_Search_Results_Page();
 instance.init();
-export default instance;
+// export default instance;
