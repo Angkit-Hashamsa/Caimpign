@@ -68,8 +68,8 @@
     height: 45px;
     border-radius: 50px;
     padding: 0px 90px 0px 45px;
-    font-size: 16px;
-    font-weight: inherit;
+    font-size: 20px;
+    font-weight: 400;
     transition: border-radius 0.5s ease, padding-right 0.5s ease;
 
     &.active {
@@ -87,7 +87,7 @@
     justify-content: end;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     margin-top: -43px;
   }
 
@@ -95,7 +95,7 @@
     display: none;
     position: relative;
     top: 12.7px;
-    right: -8px;
+    right: 0px;
     height: 40px;
     cursor: pointer;
     color: $color-black;
@@ -119,16 +119,18 @@
   }
 
   &__button {
-    margin: 1px 2px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 6px 0 0;
     border: none;
-    height: 40px;
+    height: 35px;
     padding: 0 20px;
     border-radius: 50px;
     background: $color-blue-16;
     color: $color-white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
     cursor: pointer;
     transition: display 0.5s ease;
   }
@@ -137,13 +139,13 @@
     position: absolute;
     border: none;
     background: none;
-    top: 14px;
+    top: 11px;
     left: 16px;
     padding: 0;
 
     & svg {
-      height: 16px;
-      width: 16px;
+      height: 24px;
+      width: 24px;
     }
   }
 
@@ -210,9 +212,6 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
-
-      // Max height given 5000px so that we can achieve best transition.
-      // max-height: 5000px;
       overflow: hidden;
       opacity: 1;
       transition: max-height 0.5s ease, opacity 0.5s ease;
@@ -511,10 +510,10 @@
 
   &__pagination {
     margin: auto;
-    padding: 40px 0 0;
+    padding: 55px 0 0;
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
     width: 95%;
@@ -669,11 +668,6 @@
         }
       }
     }
-
-    // &__popular {
-    //   width: 95%;
-    //   margin: 0 auto;
-    // }
   }
 }
 

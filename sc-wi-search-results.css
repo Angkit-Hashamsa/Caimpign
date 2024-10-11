@@ -66,8 +66,8 @@
   height: 45px;
   border-radius: 50px;
   padding: 0px 90px 0px 45px;
-  font-size: 16px;
-  font-weight: inherit;
+  font-size: 20px;
+  font-weight: 400;
   transition: border-radius 0.5s ease, padding-right 0.5s ease;
 }
 .sc-wi-search-results__input.active {
@@ -82,14 +82,14 @@
   justify-content: end;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 10px;
   margin-top: -43px;
 }
 .sc-wi-search-results__clear {
   display: none;
   position: relative;
   top: 12.7px;
-  right: -8px;
+  right: 0px;
   height: 40px;
   cursor: pointer;
   color: #000;
@@ -108,16 +108,18 @@
   fill: transparent;
 }
 .sc-wi-search-results__button {
-  margin: 1px 2px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px 6px 0 0;
   border: none;
-  height: 40px;
+  height: 35px;
   padding: 0 20px;
   border-radius: 50px;
   background: #2772c7;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
   cursor: pointer;
   transition: display 0.5s ease;
 }
@@ -125,13 +127,13 @@
   position: absolute;
   border: none;
   background: none;
-  top: 14px;
+  top: 11px;
   left: 16px;
   padding: 0;
 }
 .sc-wi-search-results__prefix svg {
-  height: 16px;
-  width: 16px;
+  height: 24px;
+  width: 24px;
 }
 .sc-wi-search-results__result-suggestions {
   max-height: 0px;
@@ -438,10 +440,10 @@
 }
 .sc-wi-search-results__pagination {
   margin: auto;
-  padding: 40px 0 0;
+  padding: 55px 0 0;
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
   width: 95%;
