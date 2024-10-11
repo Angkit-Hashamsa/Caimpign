@@ -83,7 +83,7 @@
             <path d="M6.34 10.903A4.567 4.567 0 0 1 1.778 6.34 4.568 4.568 0 0 1 6.34 1.777a4.569 4.569 0 0 1 4.564 4.564 4.567 4.567 0 0 1-4.564 4.562m8.73 2.721l-3.596-3.592a6.283 6.283 0 0 0 1.208-3.691A6.348 6.348 0 0 0 6.34 0 6.348 6.348 0 0 0 0 6.34a6.347 6.347 0 0 0 6.34 6.34c1.476 0 2.816-.526 3.895-1.374l3.577 3.575a.887.887 0 0 0 1.257 0 .89.89 0 0 0 0-1.257" fill="#221F20"></path>
         </svg>                
         </div>
-        <input class="sc-wi-search-results__input" type="text" name="search" placeholder="Search....">
+        <input class="sc-wi-search-results__input" autocomplete="off" type="text" name="search" placeholder="Search....">
         <div class="sc-wi-search-results__actions">
           <div class="sc-wi-search-results__clear">
             <svg viewBox="64 64 896 896" focusable="false" data-icon="close-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true">
@@ -107,6 +107,44 @@
               <span class="sc-wi-search-results__result-counter">0</span>
               articles found
             </h3>
+            <div class="sc-wi-search-results__filter-Container">
+              <div class="sc-wi-search-results__filter-label-container">
+                <button
+                  id="openModalBtn"
+                  class="sc-wi-search-results__btns modal-btn"
+                >
+                  <svg
+                    height="20"
+                    viewBox="0 0 20 20"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m12.25 13.5c.4142136 0 .75.3357864.75.75s-.3357864.75-.75.75h-4.5c-.41421356 0-.75-.3357864-.75-.75s.33578644-.75.75-.75zm2-4.25c.4142136 0 .75.33578644.75.75 0 .4142136-.3357864.75-.75.75h-8.5c-.41421356 0-.75-.3357864-.75-.75 0-.41421356.33578644-.75.75-.75zm2-4.25c.4142136 0 .75.33578644.75.75s-.3357864.75-.75.75h-12.5c-.41421356 0-.75-.33578644-.75-.75s.33578644-.75.75-.75z"
+                      fill="#2772C7"
+                    />
+                  </svg>
+                  <span class="sc-wi-search-results__filter-count">0</span>
+                </button>
+                <span>|</span>
+                <button class="sc-wi-search-results__btns all-btn">All</button>
+              </div>
+              <div class="sc-wi-search-results__filter-pills">
+                <div class="sc-wi-search-results__you-selected">
+                  <h5 class="sc-wi-search-results__filter-pills-heading">You Have Selected:</h5>
+                  <button class="sc-wi-search-results__tag no-borer-tag mobile-you-selected">clear all</button>
+                </div>
+                <h5 class="sc-wi-search-results__filter-pills-heading"></h5>
+                <div class="sc-wi-search-results__selected-filters-container"></div>
+                <button class="sc-wi-search-results__filter-show-more">show more</button>
+                <!-- <h5 class="sc-wi-search-results__filter-pills-heading">
+                  You Have Selected:
+                </h5>
+                <div class="sc-wi-search-results__selected-filters-container">
+                </div>
+                <button class="sc-wi-search-results__filter-show-more">Show more</button> -->
+              </div>
+            </div>
             <div class="sc-wi-search-results__articles"></div>
           </div>
           <div class="sc-wi-search-results__pagination"></div>
@@ -329,6 +367,60 @@
       popular-articles-show-less="View Less"
     >
     </span>
+    <div id="sc-wi-search-results-modal" class="sc-wi-search-results__modal">
+      <div class="sc-wi-search-results__modal-content">
+        <div class="sc-wi-search-results__modal-content-container">
+          <div class="sc-wi-search-results__modal-header">
+            <h4>Filter By</h4>
+            <span class="sc-wi-search-results__filter-close-btn"
+              ><svg
+                fill="none"
+                height="25"
+                width="25"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1C4.13401 1 1 4.13401 1 8C1 11.866 4.13401 15 8 15ZM4.9914 6.06648C4.69851 5.77358 4.69851 5.29871 4.9914 5.00582C5.28429 4.71292 5.75917 4.71292 6.05206 5.00582L8.01146 6.96522L9.97086 5.00582C10.2638 4.71292 10.7386 4.71292 11.0315 5.00582C11.3244 5.29871 11.3244 5.77358 11.0315 6.06648L9.07212 8.02588L11.0315 9.98528C11.3244 10.2782 11.3244 10.753 11.0315 11.0459C10.7386 11.3388 10.2638 11.3388 9.97086 11.0459L8.01146 9.08654L6.05206 11.0459C5.75917 11.3388 5.28429 11.3388 4.9914 11.0459C4.69851 10.753 4.69851 10.2782 4.9914 9.98528L6.9508 8.02588L4.9914 6.06648Z"
+                  fill="#191919"
+                  fill-rule="evenodd"
+                ></path></svg
+            ></span>
+          </div>
+          <div class="sc-wi-search-results__filter-list"></div>
+          <div class="sc-wi-search-results__button-container">
+            <button class="sc-wi-search-results__btns reset-btn">
+              <?xml version="1.0" encoding="utf-8"?>
+              <svg
+                width="20px"
+                height="20px"
+                viewBox="0 0 21 21"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  stroke="#2772C7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  transform="matrix(0 1 1 0 2.5 2.5)"
+                >
+                  <path
+                    d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8"
+                  ></path>
+                  <path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)"></path>
+                </g>
+              </svg>
+              <span>Reset</span>
+            </button>
+            <button class="sc-wi-search-results__btns apply-filter">
+              Apply
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="./sc-wi-search-results.js"></script>
 </body>
