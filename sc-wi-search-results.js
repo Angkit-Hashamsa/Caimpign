@@ -8,6 +8,7 @@ class WI_Search_Results_Page {
       console.log("Called");
       this.currentPage = 1;
       this.searchResults = [];
+      this.tmpSearchResult = [];
       this.filterData = [];
       this.selectedFilters = [];
       this.searchResultsCounter = 0;
@@ -298,8 +299,27 @@ class WI_Search_Results_Page {
     });
 
     this.filterData = filters;
-
+    this.tmpSearchResult = this.searchResults; 
     this.initiateFilter(filters);
+  }
+
+
+  filterArticlesByCategories(articles, selectedFilters) {
+    // Convert the selectedFilters into an array of IDs
+    const filterIds = selectedFilters.map(filter => filter.id);
+  
+    // Filter the articles based on categories and sub-categories
+    return articles.filter(article => {
+      return article["article-categories"].some(category => {
+        // Check if the main category is in the selected filters
+        if (filterIds.includes(category.slug)) {
+          return true;
+        }
+  
+        // Check if any of the sub-categories match the selected filters
+        return category["sub-categories"].some(subCategory => filterIds.includes(subCategory.slug));
+      });
+    });
   }
 
   /**
@@ -418,7 +438,10 @@ class WI_Search_Results_Page {
       const modal = document.getElementById("sc-wi-search-results-modal");
 
       setTimeout(() => {
-        // this.filterData(this.selectedFilters);
+        const data = this.filterArticlesByCategories(this.tmpSearchResult, this.selectedFilters);
+        this.currentPage = 1;
+        this.update_pagination_and_content(data)
+        
         this.renderSelectedFilters();
       }, 100);
       this.closeModal(modal);
@@ -469,11 +492,11 @@ class WI_Search_Results_Page {
      * Handles the click event on the "clear all filters" button.
      */
     allFilterButton.addEventListener("click", () =>
-      this.handleReset(this.articleData)
+      this.handleReset(this.searchResults)
     );
 
     resetBtn.addEventListener("click", () =>
-      this.handleReset(this.articleData)
+      this.handleReset(this.searchResults)
     );
 
     /**
@@ -590,7 +613,7 @@ class WI_Search_Results_Page {
         this.labels?.clear_all_filter ?? "Clear all filter";
       pillsContainer.appendChild(clearAllPill);
       clearAllPill.addEventListener("click", () =>
-        this.handleReset(this.articleData)
+        this.handleReset(this.searchResults)
       );
 
       if (window.innerWidth < 700) {
@@ -598,7 +621,7 @@ class WI_Search_Results_Page {
       }
 
       mobileClearAll.addEventListener("click", () =>
-        this.handleReset(this.articleData)
+        this.handleReset(this.searchResults)
       );
       filterCount.style.display = "flex";
       filterCount.textContent = `${this.selectedFilters.length}`;
@@ -659,6 +682,8 @@ class WI_Search_Results_Page {
       this.selectedFilters = [];
       // this.newFilterData = articleData;
       // this.totalPages = Math.ceil(articleData.length / this.itemsPerPage);
+      this.currentPage = 1;
+      this.update_pagination_and_content(articleData)
       this.renderSelectedFilters();
       // this.renderData();
   
@@ -737,11 +762,11 @@ class WI_Search_Results_Page {
                       const html = [];
 
                       result["article-categories"].forEach((category) => {
-                        html.push(`<span>${category?.name}</span>`);
+                        html.push(`<span class="sc-wi-search-results__news-tag" tabindex="0" data-filter-tag="${category?.slug}" >${category?.name}</span>`);
                         // Render sub-categories if they exist
                         if (category["sub-categories"]) {
                           category["sub-categories"].forEach((subCategory) => {
-                            html.push(`<span>${subCategory?.name}</span>`);
+                            html.push(`<span class="sc-wi-search-results__news-tag" tabindex="0" data-filter-tag="${subCategory?.slug}">${subCategory?.name}</span>`);
                           });
                         }
                       });
@@ -1088,6 +1113,7 @@ class WI_Search_Results_Page {
       this?.toggle_popular_articles_section(number_of_results);
       this?.generate_articles(paginated_results);
       this?.generate_pagination(search_results);
+      this.handleTag();
       this?.slide_back_to_main_articles_section();
 
       if (
@@ -1102,6 +1128,56 @@ class WI_Search_Results_Page {
     }
   }
 
+  handleTag = () => {
+    const tags = document.querySelectorAll('.sc-wi-search-results__news-tag');
+    tags.forEach(tag => {
+      tag.addEventListener('click', e => {
+        const slug = e.target.dataset.filterTag;
+        console.log({slug,name:e.target.textContent});
+        this.selectedFilters = [{id:slug, name: e.target.textContent}]
+        const data = this.filterArticlesByCategories(this.tmpSearchResult, this.selectedFilters);
+        console.log(data);
+        this.renderSelectedFilters();
+        this.update_pagination_and_content(data)
+        // this.renderSelectedFilters();
+        // this.update_pagination_and_content(this.searchResults)
+        // const subCheckbox = document.querySelectorAll('.checkbox-sub-category');
+        // const allCheckbox = document.querySelectorAll('.all-checkbox');
+        // const slug = e.target.dataset.filterTag;
+        // subCheckbox.forEach(checkbox => {
+        //   if (slug === checkbox.id) {
+        //     let selectedFilter;
+        //     if (!checkbox.checked) {
+        //       checkbox.checked = true;
+        //       checkbox.nextElementSibling.classList.add('selected');
+        //       const checkboxName = checkbox.nextElementSibling.innerText;
+        //       selectedFilter = [{ id: checkbox.id, name: checkboxName }];
+        //       this.selectedFilters = selectedFilter;
+        //       // this.filterData(selectedFilter);
+        //       this.renderSelectedFilters();
+        //     }
+        //   } else {
+        //     checkbox.checked = false;
+        //     checkbox.nextElementSibling.classList.remove('selected');
+        //   }
+        // });
+        // const offset = window.innerWidth > 768 ? 40 : 0; // Adjust the offset value to add spacing at the top
+        // const elementPosition = this.parentDiv.getBoundingClientRect().top + window.scrollY;
+        // console.log('hello');
+
+        // window.scrollTo({
+        //   top: elementPosition - offset,
+        //   behavior: 'smooth'
+        // });
+        // allCheckbox.forEach(checkbox => {
+        //   checkbox.checked = false;
+        //   checkbox.nextElementSibling.classList.remove('selected');
+        // });
+      });
+    });
+  };
+
+  // handleTag();
   check_and_set_clear_icon(input_value = "") {
     if (input_value?.length > 0) {
       this.clearSearchResults.classList.add("active");
